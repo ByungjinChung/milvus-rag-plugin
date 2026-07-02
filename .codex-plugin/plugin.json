@@ -1,0 +1,22 @@
+{
+  "$schema": "https://developers.openai.com/schemas/codex-plugin.json",
+  "name": "milvus-rag",
+  "version": "0.1.0",
+  "description": "General-purpose agentic RAG plugin — attach any Milvus collection to Codex as a live document corpus.",
+  "author": {
+    "name": "AgenticOS"
+  },
+  "homepage": "https://github.com/ByungjinChung/milvus-rag-plugin",
+  "repository": "https://github.com/ByungjinChung/milvus-rag-plugin",
+  "license": "MIT",
+  "keywords": ["milvus", "retrieval", "rag", "agentic", "corpus", "mcp"],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Milvus RAG",
+    "shortDescription": "Turn any Milvus collection into a Codex research tool",
+    "longDescription": "General-purpose agentic RAG plugin. Attach a running Milvus collection to Codex as a live document corpus and let the agent explore it with five tools mirroring the Glob / Grep / Read affordances Codex already understands: Browse (name-glob docs), Search (regex over page text), Study (read a page range), Coverage (cross-doc hit-count sanity check), Preview (first-page identification). Works with any Milvus schema that carries doc / page / raw_text fields; RETRIEVAL_CORE_FIELD_* env vars remap column names when your schema differs.",
+    "developerName": "AgenticOS",
+    "category": "Research",
+    "capabilities": ["Read"]
+  }
+}

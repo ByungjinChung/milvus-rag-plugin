@@ -1,0 +1,36 @@
+{
+  "mcp_servers": {
+    "corpus": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/ByungjinChung/milvus-rag-plugin",
+        "milvus-rag"
+      ],
+      "env": {
+        "MILVUS_RAG_URI": "http://127.0.0.1:19530",
+        "MILVUS_RAG_COLLECTION": "pages",
+        "MILVUS_RAG_TEXT_FIELD": "text",
+        "MILVUS_RAG_METRIC": "COSINE",
+        "LANG": "C"
+      },
+      "env_vars": [
+        "MILVUS_RAG_URI",
+        "MILVUS_RAG_COLLECTION",
+        "MILVUS_RAG_DB_NAME",
+        "MILVUS_RAG_USER",
+        "MILVUS_RAG_PASSWORD",
+        "MILVUS_RAG_TOKEN",
+        "MILVUS_RAG_TEXT_FIELD",
+        "MILVUS_RAG_VECTOR_FIELD",
+        "MILVUS_RAG_EMBED_URL",
+        "MILVUS_RAG_EMBED_MODEL",
+        "MILVUS_RAG_EMBED_API_KEY",
+        "MILVUS_RAG_METRIC",
+        "MILVUS_RAG_EMBED_TIMEOUT_S"
+      ],
+      "startup_timeout_sec": 60,
+      "tool_timeout_sec": 120
+    }
+  }
+}

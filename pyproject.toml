@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "milvus-rag"
+version = "0.1.0"
+description = "General-purpose agentic RAG plugin for OpenAI Codex — attach any Milvus collection as a live document corpus (Browse / Search / Study / Coverage / Preview)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "AgenticOS" }]
+keywords = ["codex", "mcp", "milvus", "retrieval", "rag", "agentic"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "pymilvus>=2.4",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/ByungjinChung/milvus-rag-plugin"
+
+# Console entry point so `uvx milvus-rag` (invoked by Codex plugin
+# marketplace via .mcp.json) resolves to the MCP server main loop.
+# Also lets a plain `pip install milvus-rag` expose a `milvus-rag`
+# command on PATH without needing `-m milvus_rag`.
+[project.scripts]
+milvus-rag = "milvus_rag.server:main"
+
+[tool.setuptools.packages.find]
+include = ["milvus_rag*"]
