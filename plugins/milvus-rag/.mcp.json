@@ -1,5 +1,5 @@
 {
-  "mcp_servers": {
+  "mcpServers": {
     "corpus": {
       "command": "uvx",
       "args": [
@@ -9,8 +9,9 @@
       ],
       "env": {
         "MILVUS_RAG_URI": "http://127.0.0.1:19530",
-        "MILVUS_RAG_COLLECTION": "pages",
+        "MILVUS_RAG_COLLECTION": "jedec_chunks",
         "MILVUS_RAG_TEXT_FIELD": "text",
+        "MILVUS_RAG_VECTOR_FIELD": "dense",
         "MILVUS_RAG_METRIC": "COSINE",
         "LANG": "C"
       },

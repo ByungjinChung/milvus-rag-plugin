@@ -1,31 +1,26 @@
 {
-  "$schema": "https://developers.openai.com/schemas/codex-plugin.json",
   "name": "milvus-rag",
   "version": "0.1.0",
-  "description": "General-purpose agentic RAG plugin for OpenAI Codex. Attach any Milvus collection as a live document corpus.",
+  "description": "Milvus 컬렉션을 Codex 업무 지식베이스로 연결하는 RAG 플러그인입니다.",
   "author": {
-    "name": "AgenticOS"
+    "name": "ByungjinChung - AI Design Lab"
   },
   "homepage": "https://github.com/ByungjinChung/milvus-rag-plugin",
   "repository": "https://github.com/ByungjinChung/milvus-rag-plugin",
   "license": "MIT",
-  "keywords": [
-    "milvus",
-    "retrieval",
-    "rag",
-    "agentic",
-    "corpus",
-    "mcp"
-  ],
+  "keywords": ["milvus", "retrieval", "rag", "agentic", "corpus", "mcp"],
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Milvus RAG",
-    "shortDescription": "Turn any Milvus collection into a Codex research tool",
-    "longDescription": "Attach a running Milvus collection to Codex as a live document corpus. The plugin exposes retrieval tools for semantic search, regex matching, exact row fetching, corpus browsing, and coverage checks. It works with any Milvus schema that carries a text field, and semantic search can be enabled by adding vector and embedding endpoint settings.",
-    "developerName": "AgenticOS",
+    "shortDescription": "Milvus 문서 컬렉션을 Codex에서 바로 검색하고 읽습니다.",
+    "longDescription": "Milvus RAG는 이미 구축된 Milvus 컬렉션을 Codex의 업무 지식베이스처럼 연결합니다. Codex는 Search, Grep, Fetch 도구로 문서를 의미 기반 검색하고, 정확한 키워드를 찾고, 선택한 청크의 원문과 메타데이터를 읽을 수 있습니다. 업무 맥락을 정확히 연결하려면 MILVUS_RAG_URI에는 Milvus 접속 주소, MILVUS_RAG_COLLECTION에는 사용할 컬렉션 이름, MILVUS_RAG_TEXT_FIELD에는 본문 텍스트 필드명을 설정해야 합니다. 의미 검색을 쓰려면 MILVUS_RAG_VECTOR_FIELD에 벡터 필드명, MILVUS_RAG_EMBED_URL과 MILVUS_RAG_EMBED_MODEL에 컬렉션 생성 때 사용한 임베딩과 호환되는 endpoint와 모델을 넣어야 합니다. file_name, title, viewer_page, true_page, section_num 같은 메타데이터 필드가 컬렉션에 있으면 답변에서 출처와 문서 위치를 더 정확히 연결할 수 있습니다.",
+    "developerName": "ByungjinChung - AI Design Lab",
     "category": "Research",
-    "capabilities": [
-      "Read"
+    "capabilities": ["Read"],
+    "defaultPrompt": [
+      "문서 목록 보여줘",
+      "MRE 관련 내용을 스펙에서 찾아 설명해줘",
+      "이 시스템 로그의 MR 값을 스펙 기준으로 해석해줘"
     ]
   }
 }
