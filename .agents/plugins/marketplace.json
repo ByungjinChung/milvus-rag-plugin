@@ -1,0 +1,20 @@
+{
+  "name": "milvus-rag-plugin",
+  "interface": {
+    "displayName": "Milvus RAG Plugin"
+  },
+  "plugins": [
+    {
+      "name": "milvus-rag",
+      "source": {
+        "source": "local",
+        "path": "./plugins/milvus-rag"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    }
+  ]
+}

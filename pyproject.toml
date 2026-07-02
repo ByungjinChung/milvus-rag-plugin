@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "milvus-rag"
 version = "0.1.0"
-description = "General-purpose agentic RAG plugin for OpenAI Codex — attach any Milvus collection as a live document corpus (Browse / Search / Study / Coverage / Preview)."
+description = "General-purpose agentic RAG plugin for OpenAI Codex. Attach any Milvus collection as a live document corpus."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -35,10 +35,6 @@ dev = [
 [project.urls]
 Homepage = "https://github.com/ByungjinChung/milvus-rag-plugin"
 
-# Console entry point so `uvx milvus-rag` (invoked by Codex plugin
-# marketplace via .mcp.json) resolves to the MCP server main loop.
-# Also lets a plain `pip install milvus-rag` expose a `milvus-rag`
-# command on PATH without needing `-m milvus_rag`.
 [project.scripts]
 milvus-rag = "milvus_rag.server:main"
 
