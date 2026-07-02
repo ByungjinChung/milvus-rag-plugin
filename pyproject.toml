@@ -5,11 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "milvus-rag"
 version = "0.1.0"
-description = "General-purpose agentic RAG plugin for OpenAI Codex. Attach any Milvus collection as a live document corpus."
+description = "Milvus 컬렉션을 Codex 업무 지식베이스로 연결하는 RAG 플러그인입니다."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "AgenticOS" }]
+authors = [{ name = "ByungjinChung - AI Design Lab" }]
 keywords = ["codex", "mcp", "milvus", "retrieval", "rag", "agentic"]
 classifiers = [
     "Development Status :: 4 - Beta",
